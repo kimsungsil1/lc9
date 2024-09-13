@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>직원 생각 대시보드</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>직원 생각 대시보드</h1>
+
+        <div id="employee-form">
+            <h2>직원 등록</h2>
+            <input type="text" id="employee-name" placeholder="직원 이름">
+            <input type="text" id="employee-thought" placeholder="직원 생각">
+            <button onclick="addEmployee()">직원 추가</button>
+        </div>
+
+        <div id="employee-board">
+            <h2>직원 목록</h2>
+            <div id="employee-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
