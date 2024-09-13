@@ -4,6 +4,11 @@ function addEmployee() {
     const nameInput = document.getElementById('employee-name');
     const thoughtInput = document.getElementById('employee-thought');
 
+    if (nameInput.value === '' || thoughtInput.value === '') {
+        alert('모든 필드를 입력해주세요.');
+        return;
+    }
+
     const employee = {
         name: nameInput.value,
         thought: thoughtInput.value
@@ -20,7 +25,7 @@ function renderEmployees() {
     const employeeList = document.getElementById('employee-list');
     employeeList.innerHTML = '';
 
-    employees.forEach((employee, index) => {
+    employees.forEach(employee => {
         const employeeCard = document.createElement('div');
         employeeCard.className = 'employee-card';
 
